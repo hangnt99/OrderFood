@@ -6,6 +6,12 @@ session_start();
 
   <head>
     <title> Home | Le Cafe' </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     
+  
+   
+    
   </head>
 
   <link rel="stylesheet" type = "text/css" href ="css/bootstrap.min.css">
@@ -127,7 +133,7 @@ else {
     </div>
     <br>
     <div class="orderblock">
-    <h2>Feeling Hungry?</h2>
+    <h2 style="color: white;">Feeling Hungry?</h2>
     <center><a class="btn btn-success btn-lg" href="customerlogin.php" role="button" > Order Now </a></center>
     </div>
 
