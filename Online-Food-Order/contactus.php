@@ -125,18 +125,15 @@ else {
       </div>
     </nav>
     <br>
-
-    <div class="heading">
-     <strong>Want to contact <span class="edit"> Le Cafe' </span>?</strong>
-     <br>
-    Here are a few ways to get in touch with us.
-    </div>
-
-    <div class="col-xs-12 line"><hr></div>
-
-    <div class="container" >
-    <div class="col-md-5" style="float: none; margin: 0 auto;">
-      <div class="form-area">
+    <div class="sum">
+      <div class="leftsum">
+        <div class="heading">
+          <strong>Want to contact <span class="edit"> Le Cafe' </span>?</strong>
+          <br>
+            Here are a few ways to get in touch with us.
+        </div>
+      </div>
+      <div class="right">
         <form method="post" action="">
         <br style="clear: both">
           <h3 style="margin-bottom: 25px; text-align: center; font-size: 30px;"> Contact Form</h3>
@@ -161,15 +158,9 @@ else {
            <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="140" rows="7"></textarea>
            <span class="help-block"><p id="characterLeft" class="help-block">Max Character length : 140 </p></span>
           </div> 
-          <input type="submit" name="submit" type="button" id="submit" name="submit" class="btn btn-primary pull-right"/>    
+          <input style="position: relative; right: 250px;" type="submit" name="submit" type="button" id="submit" name="submit" class="btn btn-primary pull-right"/>    
         </form>
-
-        
-      </div>
     </div>
-      
-    </div>
-
     <?php
 if (isset($_POST['submit'])){
 require 'connection.php';

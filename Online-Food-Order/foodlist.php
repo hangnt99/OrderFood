@@ -139,7 +139,7 @@ else {
     <div class="carousel-inner">
 
       <div class="item active">
-      <img src="images/slide002.jpg" style="width:100%;">
+      <img src="images/Xmas.jpeg" style="width:100%;">
       <div class="carousel-caption">
       </div>
       </div>
@@ -152,13 +152,13 @@ else {
       </div-->
 
       <div class="item">
-      <img src="images/slide001.jpg" style="width:100%;">
+      <img src="images/bia.jpg" style="width:100%;">
       <div class="carousel-caption">
 
       </div>
       </div>
       <div class="item">
-      <img src="images/slide003.jpg" style="width:100%;">
+      <img src="images/bia2.jpg" style="width:100%;">
       <div class="carousel-caption">
       </div>
       </div>
@@ -206,18 +206,17 @@ if (mysqli_num_rows($result) > 0)
 ?>
 <div class="col-md-3">
 
-<form method="post" action="cart.php?action=add&id=<?php echo $row["F_ID"]; ?>">
-<div class="mypanel" align="center";>
-<img src="<?php echo $row["images_path"]; ?>" class="img-responsive">
-<h4 class="text-dark"><?php echo $row["name"]; ?></h4>
-<h5 class="text-info"><?php echo $row["description"]; ?></h5>
-<h5 class="text-danger">&#8377; <?php echo $row["price"]; ?>/-</h5>
-<h5 class="text-info">Quantity: <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> </h5>
+<form style="position:relative;background-color: #eee;height: 500px;border-radius: 25px;padding: 10px;"method="post" action="cart.php?action=add&id=<?php echo $row["F_ID"]; ?>">
+<img style="width: 100%;height: 250px;" src="<?php echo $row["images_path"]; ?>" class="img-responsive">
+<h4 style="text-align: center;"><?php echo $row["name"]; ?></h4>
+<h5 style="text-align: center;color: #0489B1;" ><?php echo $row["description"]; ?></h5>
+<h5 style="position: absolute;top: 69%;left: 40%;" > <?php echo $row["price"]; ?> VND</h5>
+<h5 style="position: absolute; top: 73%; left: 38%;" >Quantity: </h5>
+  <input style="position: absolute;top:79%;left: 38%;width: 50px;" type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> 
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
 <input type="hidden" name="hidden_RID" value="<?php echo $row["R_ID"]; ?>">
-<input type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Add to Cart">
-</div>
+<input style="position: absolute; top: 90%; left: 30%;" type="submit" name="add" style="margin-top:5px;" class="btn btn-success" value="Add to Cart">
 </form>
       
      
