@@ -41,7 +41,7 @@ header("location: customerlogin.php");
       }
     </script>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top navigation-clean-search" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top navigation-clean-search" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
@@ -55,36 +55,41 @@ header("location: customerlogin.php");
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="index.php">Trang chủ</a></li>
+          
+            <li><a href="contactus.php">Liên hệ</a></li>
 
           </ul>
 
 <?php
 if(isset($_SESSION['login_user1'])){
+
 ?>
+
+
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user1']; ?> </a></li>
-            <li><a href="myrestaurant.php">MANAGER CONTROL PANEL</a></li>
-            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $_SESSION['login_user1']; ?> </a></li>
+            <li><a href="myrestaurant.php">TRANG HỖ TRỢ NGƯỜI BÁN</a></li>
+            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất </a></li>
           </ul>
 <?php
 }
 else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
-            <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart  (<?php
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $_SESSION['login_user2']; ?> </a></li>
+            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Đồ ăn </a></li>
+            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
+             (<?php
               if(isset($_SESSION["cart"])){
               $count = count($_SESSION["cart"]); 
               echo "$count"; 
             }
               else
                 echo "0";
-              ?>) </a></li>
-            <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
+              ?>)
+              </a></li>
+            <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất </a></li>
           </ul>
   <?php        
 }
@@ -93,19 +98,19 @@ else {
   ?>
 
 <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span> </a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Đăng ký <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-              <li> <a href="customersignup.php"> User Sign-up</a></li>
-              <li> <a href="managersignup.php"> Manager Sign-up</a></li>
-              <li> <a href="#"> Admin Sign-up</a></li>
+              <li> <a href="customersignup.php"> User Đăng ký</a></li>
+              <li> <a href="managersignup.php"> Manager Đăng ký</a></li>
+              <li> <a href="#"> Admin Đăng ký</a></li>
             </ul>
             </li>
 
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret"></span></a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập <span class="caret"></span></a>
               <ul class="dropdown-menu">
-              <li> <a href="customerlogin.php"> User Login</a></li>
-              <li> <a href="managerlogin.php"> Manager Login</a></li>
-              <li> <a href="#"> Admin Login</a></li>
+              <li> <a href="customerlogin.php"> User Đăng nhập</a></li>
+              <li> <a href="managerlogin.php"> Manager Đăng nhập</a></li>
+              <li> <a href="#"> Admin Đăng nhập</a></li>
             </ul>
             </li>
           </ul>
@@ -146,17 +151,17 @@ else {
     </div>
    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Trước</span>
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Sau</span>
     </a>
     </div>
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Welcome To Le Cafe'</h1>      
+    <h1>Chào mừng bạn đến với Le Cafe'</h1>      
     <!--p>Let food be thy medicine and medicine be thy food</p-->
   </div>
 </div>
@@ -190,8 +195,8 @@ if (mysqli_num_rows($result) > 0)
 <img style="width: 100%;height: 250px;" src="<?php echo $row["images_path"]; ?>" class="img-responsive">
 <h4 style="text-align: center;"><?php echo $row["name"]; ?></h4>
 <h5 style="text-align: center;color: #0489B1;" ><?php echo $row["description"]; ?></h5>
-<h5 style="position: absolute;top: 69%;left: 40%;" > <?php echo $row["price"]; ?> VND</h5>
-<h5 style="position: absolute; top: 73%; left: 38%;" >Quantity: </h5>
+<h5 style="position: absolute;top: 69%;left: 35%; color: red;" ><?php echo $row["price"]; ?> VND</h5>
+<h5 style="position: absolute; top: 73%; left: 38%;" >Số lượng: </h5>
   <input style="position: absolute;top:79%;left: 38%;width: 50px;" type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;"> 
 <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">

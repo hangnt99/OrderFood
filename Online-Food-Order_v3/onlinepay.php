@@ -63,7 +63,7 @@ header("location: customerlogin.php");
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
+          
             <li><a href="contactus.php">Contact Us</a></li>
 
           </ul>
@@ -137,8 +137,8 @@ else {
 <div class="container">
     <div class="row">
         <div class="jumbotron">
-          <h1 class="text-center">Online Payment</h1>
-          <p class="text-center">Enter your payment details below.</p>
+          <h1 class="text-center">Thanh toán Online</h1>
+          <p class="text-center">Điền thông tin thanh toán của bạn</p>
         </div>
     </div>
     <div class="row">
@@ -149,7 +149,7 @@ else {
 
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <h5 class="text-muted"> Credit Card Number</h5>
+                                <h5 class="text-muted"> Số thẻ</h5>
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-3">
                                 <input type="text" class="form-control" placeholder="0000" required="" />
@@ -167,11 +167,11 @@ else {
                         <br>
                         <div class="row ">
                             <div class="col-md-3 col-sm-3 col-xs-3">
-                                <span class="help-block text-muted small-font"> Expiry Month</span>
+                                <span class="help-block text-muted small-font"> Tháng hết hạn</span>
                                 <input type="text" class="form-control" placeholder="MM" required="" />
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-3">
-                                <span class="help-block text-muted small-font">  Expiry Year</span>
+                                <span class="help-block text-muted small-font">  Năm hết hạn</span>
                                 <input type="text" class="form-control" placeholder="YY" required="" />
                             </div>
                             <div class="col-md-3 col-sm-3 col-xs-3">
@@ -186,7 +186,7 @@ else {
                         <div class="row ">
                             <div class="col-md-12 pad-adjust">
 
-                                <input type="text" class="form-control" placeholder="Name On The Card" required="" />
+                                <input type="text" class="form-control" placeholder="Tên trên thẻ" required="" />
                             </div>
                         </div>
                         <br>
@@ -194,17 +194,17 @@ else {
                             <div class="col-md-12 pad-adjust">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" checked class="text-muted" required=""> Save details for fast payments. <a href="#">Learn More</a>
+                                        <input type="checkbox" checked class="text-muted" required=""> Lưu thông tin cho lần thanh toán sau. <a href="#">Tìm hiểu thêm</a>
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="row ">
                             <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
-                             <a href="payment.php"><input type="submit" class="btn btn-danger btn-block" value="CANCEL" required="" /></a>   
+                             <a href="payment.php"><input type="submit" class="btn btn-danger btn-block" value="HỦY" required="" /></a>   
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
-                              <a href="COD.php"><input type="submit" class="btn btn-success btn-block" value="PAY NOW" required="" /></a>  
+                              <a href="COD.php"><input type="submit" class="btn btn-success btn-block" value="THANH TOÁN" required="" /></a>  
                             </div>
                         </div>
 

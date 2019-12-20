@@ -61,9 +61,9 @@ header("location: customerlogin.php");
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="index.php">Trang chủ</a></li>
+          
+            <li><a href="contactus.php">Liên hệ</a></li>
 
           </ul>
 
@@ -74,18 +74,18 @@ if(isset($_SESSION['login_user1'])){
 
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user1']; ?> </a></li>
-            <li><a href="myrestaurant.php">MANAGER CONTROL PANEL</a></li>
-            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $_SESSION['login_user1']; ?> </a></li>
+            <li><a href="myrestaurant.php">TRANG HỖ TRỢ NGƯỜI BÁN</a></li>
+            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất </a></li>
           </ul>
 <?php
 }
 else if (isset($_SESSION['login_user2'])) {
   ?>
            <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['login_user2']; ?> </a></li>
-            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Food Zone </a></li>
-            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $_SESSION['login_user2']; ?> </a></li>
+            <li><a href="foodlist.php"><span class="glyphicon glyphicon-cutlery"></span> Đồ ăn </a></li>
+            <li class="active" ><a href="foodlist.php"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng
              (<?php
               if(isset($_SESSION["cart"])){
               $count = count($_SESSION["cart"]); 
@@ -95,7 +95,7 @@ else if (isset($_SESSION['login_user2'])) {
                 echo "0";
               ?>)
               </a></li>
-            <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
+            <li><a href="logout_u.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất </a></li>
           </ul>
   <?php        
 }
@@ -104,19 +104,19 @@ else {
   ?>
 
 <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span> </a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Đăng ký <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-              <li> <a href="customersignup.php"> User Sign-up</a></li>
-              <li> <a href="managersignup.php"> Manager Sign-up</a></li>
-              <li> <a href="#"> Admin Sign-up</a></li>
+              <li> <a href="customersignup.php"> User Đăng ký</a></li>
+              <li> <a href="managersignup.php"> Manager Đăng ký</a></li>
+              <li> <a href="#"> Admin Đăng ký</a></li>
             </ul>
             </li>
 
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret"></span></a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập <span class="caret"></span></a>
               <ul class="dropdown-menu">
-              <li> <a href="customerlogin.php"> User Login</a></li>
-              <li> <a href="managerlogin.php"> Manager Login</a></li>
-              <li> <a href="#"> Admin Login</a></li>
+              <li> <a href="customerlogin.php"> User Đăng nhập</a></li>
+              <li> <a href="managerlogin.php"> Manager Đăng nhập</a></li>
+              <li> <a href="#"> Admin Đăng nhập</a></li>
             </ul>
             </li>
           </ul>
@@ -138,8 +138,8 @@ if(!empty($_SESSION["cart"]))
   ?>
   <div class="container">
       <div class="jumbotron">
-        <h1>Your Shopping Cart</h1>
-        <p>Looks tasty...!!!</p>
+        <h1>Giỏ hàng của bạn</h1>
+        <p> </p>
         
       </div>
       
@@ -148,11 +148,11 @@ if(!empty($_SESSION["cart"]))
 <table class="table table-striped">
   <thead class="thead-dark">
 <tr>
-<th width="40%">Food Name</th>
-<th width="10%">Quantity</th>
-<th width="20%">Price Details</th>
-<th width="15%">Order Total</th>
-<th width="5%">Action</th>
+<th width="40%">Tên sản phẩm</th>
+<th width="10%">Số lượng</th>
+<th width="20%">Giá</th>
+<th width="15%">Tổng</th>
+
 </tr>
 </thead>
 
@@ -166,22 +166,22 @@ foreach($_SESSION["cart"] as $keys => $values)
 <tr>
 <td><?php echo $values["food_name"]; ?></td>
 <td><?php echo $values["food_quantity"] ?></td>
-<td>&#8377; <?php echo $values["food_price"]; ?></td>
-<td>&#8377; <?php echo number_format($values["food_quantity"] * $values["food_price"], 2); ?></td>
-<td><a href="cart.php?action=delete&id=<?php echo $values["food_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+<td><?php echo $values["food_price"]; ?> VND </td>
+<td><?php echo number_format($values["food_quantity"] * $values["food_price"], 2); ?> VND</td>
+<td><a href="cart.php?action=delete&id=<?php echo $values["food_id"]; ?>"><span class="text-danger">Xóa</span></a></td>
 </tr>
 <?php 
 $total = $total + ($values["food_quantity"] * $values["food_price"]);
 }
 ?>
 <tr>
-<td colspan="3" align="right">Total</td>
-<td align="right">&#8377; <?php echo number_format($total, 2); ?></td>
+<td colspan="3" align="right">TỔNG THANH TOÁN</td>
+<td align="right"> <?php echo number_format($total, 2); ?> VND</td>
 <td></td>
 </tr>
 </table>
 <?php
-  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Empty Cart</button></a>&nbsp;<a href="foodlist.php"><button class="btn btn-warning">Continue Shopping</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Check Out</button></a>';
+  echo '<a href="cart.php?action=empty"><button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa giỏ hàng </button></a>&nbsp;<a href="foodlist.php"><button class="btn btn-warning">Tiếp tục chọn món</button></a>&nbsp;<a href="payment.php"><button class="btn btn-success pull-right"><span class="glyphicon glyphicon-share-alt"></span> Thanh toán ngay</button></a>';
 ?>
 </div>
 <br><br><br><br><br><br><br>
@@ -192,8 +192,8 @@ if(empty($_SESSION["cart"]))
   ?>
   <div class="container">
       <div class="jumbotron">
-        <h1>Your Shopping Cart</h1>
-        <p>Oops! We can't smell any food here. Go back and <a href="foodlist.php">order now.</a></p>
+        <h1>Giỏ hàng của bạn</h1>
+        <p>Ohh, giỏ hàng của bạn còn trống, <a href="foodlist.php">ĐẶT NGAY.</a></p>
         
       </div>
       

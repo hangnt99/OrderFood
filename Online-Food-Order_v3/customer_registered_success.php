@@ -52,14 +52,14 @@
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active" ><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li class="active" ><a href="index.php">Trang chủ</a></li>
+            
+            <li><a href="contactus.php">Liên hệ</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng ký </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập </a></li>
           </ul>
         </div>
 
@@ -93,8 +93,8 @@ $conn->close();
 <div class="container">
 	<div class="jumbotron" style="text-align: center;">
 		<h2> <?php echo "Welcome $fullname!" ?> </h2>
-		<h1>Your account has been created.</h1>
-		<p>Login Now from <a href="customerlogin.php">HERE</a></p>
+		<h1>Tài khoản của bạn đã được tạo.</h1>
+		<p>Đăng nhập ngay <a href="customerlogin.php">TẠI ĐÂY</a></p>
 	</div>
 </div>
 

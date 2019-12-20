@@ -52,24 +52,24 @@
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li  ><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li  ><a href="index.php">Trang chủ</a></li>
+           
+            <li><a href="contactus.php">Liên hệ</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span> </a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Đăng ký <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-              <li> <a href="customersignup.php"> User Sign-up</a></li>
-              <li> <a href="managersignup.php"> Manager Sign-up</a></li>
+              <li> <a href="customersignup.php"> User Đăng ký</a></li>
+              <li> <a href="managersignup.php"> Manager Đăng ký</a></li>
            
             </ul>
             </li>
 
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret"></span></a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập <span class="caret"></span></a>
               <ul class="dropdown-menu">
-              <li> <a href="customerlogin.php"> User Login</a></li>
-              <li> <a href="managerlogin.php"> Manager Login</a></li>
+              <li> <a href="customerlogin.php"> User Đăng nhập</a></li>
+              <li> <a href="managerlogin.php"> Manager Đăng nhập</a></li>
             
             </ul>
             </li>
@@ -81,24 +81,25 @@
   
     <div style="display: flex;" class="sum">
       <div style="width: 40%;" class="left">
-        <div style="position: relative;top: 150px; text-align: center;" >
-          <h1 style="font-size: 50px;">Hi Manager, <br> Welcome to <span class="edit"> Le Cafe' </span></h1>
-          <br>
-          <p style="font-size: 25px;">Get started by creating your account</p>
-        </div>
+      <div style="position: relative; top: 150px; text-align: center;" >
+     <h1 style="font-size: 30px;">Chào mừng manager đến với </h1>
+     <h1 style="font-size: 50px;"><span class="edit"> Le Cafe' </span></h1>
+     <br>
+      <p style="font-size: 20px;">Bắt đầu tạo tài khoản!</p>
+    </div>
       </div>  
       
     <div style="width: 60%; margin-left: 100px;margin-right: 100px;" class="right"> 
       <div style="margin-top: 45px;" class="panel panel-primary">
-        <div class="panel-heading"> Create Account </div>
+        <div class="panel-heading"> Tạo tài khoản </div>
         <div class="panel-body">
           
         <form role="form" action="manager_registered_success.php" method="POST">
          
           <div class="row1">
-            <label for="fullname"><span class="text-danger" style="margin-right: 5px;">*</span> Full Name: </label>
+            <label for="fullname"><span class="text-danger" style="margin-right: 5px;">*</span> Họ tên: </label>
             <div class="input-group">
-              <input class="form-control" id="fullname" type="text" name="fullname" placeholder="Your Full Name" required="" autofocus="">
+              <input class="form-control" id="fullname" type="text" name="fullname" placeholder="" required="" autofocus="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span>
@@ -107,9 +108,9 @@
         </div>
 
         <div class="row1">
-            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Username: </label>
+            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Tên đăng nhập: </label>
             <div class="input-group">
-              <input class="form-control" id="username" type="text" name="username" placeholder="Your Username" required="">
+              <input class="form-control" id="username" type="text" name="username" placeholder="" required="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span>
@@ -120,7 +121,7 @@
         <div class="row1">
             <label for="email"><span class="text-danger" style="margin-right: 5px;">*</span> Email: </label>
             <div class="input-group">
-              <input class="form-control" id="email" type="email" name="email" placeholder="Email" required="">
+              <input class="form-control" id="email" type="email" name="email" placeholder="" required="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></label>
             </span>
@@ -129,9 +130,9 @@
         </div>
 
         <div class="row1">
-            <label for="contact"><span class="text-danger" style="margin-right: 5px;">*</span> Contact: </label>
+            <label for="contact"><span class="text-danger" style="margin-right: 5px;">*</span> Liên hệ: </label>
             <div class="input-group">
-              <input class="form-control" id="contact" type="text" name="contact" placeholder="Contact" required="">
+              <input class="form-control" id="contact" type="text" name="contact" placeholder="" required="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></label>
             </span>      
@@ -139,9 +140,9 @@
         </div>
 
         <div class="row1">
-            <label for="address"><span class="text-danger" style="margin-right: 5px;">*</span> Address: </label>
+            <label for="address"><span class="text-danger" style="margin-right: 5px;">*</span> Địa chỉ: </label>
             <div class="input-group">
-              <input class="form-control" id="address" type="text" name="address" placeholder="Address" required="">
+              <input class="form-control" id="address" type="text" name="address" placeholder="Địa chỉ" required="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-home" aria-hidden="true"></label>
             </span>
@@ -150,9 +151,9 @@
         </div>
 
         <div class="row1">
-            <label for="password"><span class="text-danger" style="margin-right: 5px;">*</span> Password: </label>
+            <label for="password"><span class="text-danger" style="margin-right: 5px;">*</span> Mật khẩu: </label>
             <div class="input-group">
-              <input class="form-control" id="password" type="password" name="password" placeholder="Password" required="">
+              <input class="form-control" id="password" type="password" name="password" placeholder="" required="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
             </span>     
@@ -163,9 +164,9 @@
 
         <div class="row">
           <div style="margin-top: 20px;text-align: center;">
-              <button class="btn btn-primary" type="submit">Submit</button>
+              <button class="btn btn-primary" type="submit">Xác nhận</button>
               <br><br>
-              <label style="text-align: center;"><a href="managerlogin.php">Have an account? Login.</a></label>
+              <label style="text-align: center;"><a href="managerlogin.php">Bạn đã có tài khoản? Đăng nhập.</a></label>
           </div>
         </div>
       </form>

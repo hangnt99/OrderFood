@@ -60,7 +60,7 @@ header("location: customerlogin.php");
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
             <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
+       
             <li><a href="contactus.php">Contact Us</a></li>
 
           </ul>
@@ -153,8 +153,8 @@ $gtotal = 0;
         ?>
         <div class="container">
           <div class="jumbotron">
-            <h1>Something went wrong!</h1>
-            <p>Try again later.</p>
+            <h1>Lỗi!!!</h1>
+            <p>Bạn vui lòng thử lại.</p>
           </div>
         </div>
 
@@ -166,17 +166,17 @@ $gtotal = 0;
         ?>
         <div class="container">
           <div class="jumbotron">
-            <h1>Choose your payment option</h1>
+            <h1 class="text-center">THANH TOÁN</h1>
           </div>
         </div>
         <br>
-<h1 class="text-center">Grand Total: &#8377;<?php echo "$gtotal"; ?>/-</h1>
-<h5 class="text-center">including all service charges. (no delivery charges applied)</h5>
+<h1 class="text-center">Tổng hóa đơn: <?php echo "$gtotal"; ?> VND </h1>
+<h5 class="text-center"><i>(đã bao gồm cả phí vận chuyển)</i></h5>
 <br>
 <h1 class="text-center">
-  <a href="cart.php"><button class="btn btn-warning"><span class="glyphicon glyphicon-circle-arrow-left"></span> Go back to cart</button></a>
-  <a href="onlinepay.php"><button class="btn btn-success"><span class="glyphicon glyphicon-credit-card"></span> Pay Online</button></a>
-  <a href="COD.php"><button class="btn btn-success"><span class="glyphicon glyphicon-"></span> Cash On Delivery</button></a>
+  <a href="cart.php"><button class="btn btn-warning"><span class="glyphicon glyphicon-circle-arrow-left"></span> Trở lại giỏ hàng</button></a>
+  <a href="onlinepay.php"><button class="btn btn-success"><span class="glyphicon glyphicon-credit-card"></span> Thanh toán Online</button></a>
+  <a href="COD.php"><button class="btn btn-success"><span class="glyphicon glyphicon-"></span> Nhận hàng thanh toán</button></a>
 </h1>
         
 

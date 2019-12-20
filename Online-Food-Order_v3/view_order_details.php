@@ -61,15 +61,15 @@ header('Location: managerlogin.php');
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="index.php">Trang chủ</a></li>
+           
+            <li><a href="contactus.php">Liên hệ</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $login_session; ?> </a></li>
-            <li class="active"> <a href="managerlogin.php">MANAGER CONTROL PANEL</a></li>
-            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $login_session; ?> </a></li>
+            <li class="active"> <a href="managerlogin.php">TRANG HỖ TRỢ QUẢN LÝ BÁN HÀNG</a></li>
+            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất </a></li>
           </ul>
         </div>
 
@@ -81,8 +81,8 @@ header('Location: managerlogin.php');
 
 <div class="container">
     <div class="jumbotron">
-     <h1>Hello Manager! </h1>
-     <p>Manage all your restaurant from here</p>
+     <h1>Xin chào Manager! </h1>
+     <p>Quản lý cửa hàng của bạn tại đây.</p>
 
     </div>
     </div>
@@ -98,12 +98,12 @@ header('Location: managerlogin.php');
     	<div class="col-xs-3" style="text-align: center;">
 
     	<div class="list-group">
-    		<a href="myrestaurant.php" class="list-group-item ">My Restaurant</a>
-    		<a href="view_food_items.php" class="list-group-item">View Food Items</a>
-    		<a href="add_food_items.php" class="list-group-item ">Add Food Items</a>
-    		<a href="edit_food_items.php" class="list-group-item ">Edit Food Items</a>
-    		<a href="delete_food_items.php" class="list-group-item ">Delete Food Items</a>
-        <a href="view_order_details.php" class="list-group-item active">View Order Details</a>
+    	<a href="myrestaurant.php" class="list-group-item ">Cửa hàng của tôi</a>
+    		<a href="view_food_items.php" class="list-group-item active">Menu</a>
+    		<a href="add_food_items.php" class="list-group-item ">Thêm sản phẩm</a>
+    		<a href="edit_food_items.php" class="list-group-item ">Sửa sản phẩm</a>
+    		<a href="delete_food_items.php" class="list-group-item ">Xóa sản phẩm</a>
+        <a href="view_order_details.php" class="list-group-item ">Xem chi tiết đơn hàng</a>
     	</div>
     </div>
     
@@ -114,7 +114,7 @@ header('Location: managerlogin.php');
       <div class="form-area" style="padding: 0px 100px 100px 100px;">
         <form action="" method="POST">
         <br style="clear: both">
-          <h3 style="margin-bottom: 25px; text-align: center; font-size: 30px;"> YOUR FOOD ORDER LIST </h3>
+          <h3 style="margin-bottom: 25px; text-align: center; font-size: 30px;"> DANH SÁCH ĐƠN ĐẶT HÀNG </h3>
 
 
 <?php
@@ -137,13 +137,13 @@ if (mysqli_num_rows($result) > 0)
     <thead class="thead-dark">
       <tr>
         <th>  </th>
-        <th> Order ID </th>
-        <th> Food ID </th>
-        <th> Order Date </th>
-        <th> Food Name </th>
-        <th> Price </th>
-        <th> Quantity </th>
-        <th> Customer </th>
+        <th> Mã đơn </th>
+        <th> Mã SP </th>
+        <th> Ngày đặt </th>
+        <th> Tên sản phẩm </th>
+        <th> Giá </th>
+        <th> Số lượng </th>
+        <th> Khách hàng </th>
       </tr>
     </thead>
 
@@ -172,7 +172,7 @@ if (mysqli_num_rows($result) > 0)
 
   <?php } else { ?>
 
-  <h4><center>0 RESULTS</center> </h4>
+  <h4><center>0 KẾT QUẢ</center> </h4>
 
   <?php } ?>
 

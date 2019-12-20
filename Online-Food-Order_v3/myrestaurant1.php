@@ -70,14 +70,14 @@ if (!$success){
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active" ><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li class="active" ><a href="index.php">Trang chủ</a></li>
+            
+            <li><a href="contactus.php">Liên hệ</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng ký </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập </a></li>
           </ul>
         </div>
 
@@ -85,8 +85,8 @@ if (!$success){
     </nav>
     <div class="container">
 	<div class="jumbotron" style="text-align: center;">
-		<h1>Your already have one restaurant.</h1>
-		<p>Go back to your <a href="view_food_items.php">Restaurant</a></p>
+		<h1>Bạn đã có một cửa hàng trước đây.</h1>
+		<p>Trở lại <a href="view_food_items.php">CỬA HÀNG CỦA BẠN</a></p>
 	</div>
 </div>
 	

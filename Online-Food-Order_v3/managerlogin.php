@@ -10,7 +10,7 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 <html>
 
   <head>
-    <title> Manager Login | Le Cafe' </title>
+    <title> Manager Đăng nhập | Le Cafe' </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
@@ -61,24 +61,24 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li ><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li ><a href="index.php">Trang chủ</a></li>
+           
+            <li><a href="contactus.php">Liên hệ</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span> </a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Đăng ký <span class="caret"></span> </a>
                 <ul class="dropdown-menu">
-              <li> <a href="customersignup.php"> User Sign-up</a></li>
-              <li> <a href="managersignup.php"> Manager Sign-up</a></li>
+              <li> <a href="customersignup.php"> User Đăng ký</a></li>
+              <li> <a href="managersignup.php"> Manager Đăng ký</a></li>
 
             </ul>
             </li>
 
-            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Login <span class="caret"></span></a>
+            <li><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập <span class="caret"></span></a>
               <ul class="dropdown-menu">
-              <li> <a href="customerlogin.php"> User Login</a></li>
-              <li> <a href="managerlogin.php"> Manager Login</a></li>
+              <li> <a href="customerlogin.php"> User Đăng nhập</a></li>
+              <li> <a href="managerlogin.php"> Manager Đăng nhập</a></li>
  
             </ul>
             </li>
@@ -89,27 +89,27 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
     </nav>
 
     <div class="container">
-    <div class="jumbotron">
-     <h1>Hi Manager,<br> Welcome to <span class="edit"> Le Cafe' </span></h1>
-     <br>
-   <p>Kindly LOGIN to continue.</p>
-    </div>
+    <div style="text-align: center;background-color: #eee;margin-left: 50px;margin-right: 50px;border-radius: 25px;padding: 10px;" >
+    <h1 style="font-size: 40px;">Chào mừng bạn đến với </h1>
+     <h1 style="font-size: 50px;"><span class="edit"> Le Cafe' </span></h1>
+        <p style="font-size: 15px;"><i>Đăng nhập để tiếp tục.</i></p>
+      </div>
     </div>
 
     <div class="container" style="margin-top: 4%; margin-bottom: 2%;">
       <div class="col-md-5 col-md-offset-4">
         <label style="margin-left: 5px;color: red;"><span> <?php echo $error;  ?> </span></label>
       <div class="panel panel-primary">
-        <div class="panel-heading"> Login </div>
+        <div class="panel-heading"> Đăng nhập </div>
         <div class="panel-body">
           
         <form action="" method="POST">
           
         <div class="row">
           <div class="form-group col-xs-12">
-            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Username: </label>
+            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Tên đăng nhập: </label>
             <div class="input-group">
-              <input class="form-control" id="username" type="text" name="username" placeholder="Username" required="" autofocus="">
+              <input class="form-control" id="username" type="text" name="username" placeholder="" required="" autofocus="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></label>
             </span>
@@ -120,9 +120,9 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 
         <div class="row">
           <div class="form-group col-xs-12">
-            <label for="password"><span class="text-danger" style="margin-right: 5px;">*</span> Password: </label>
+            <label for="password"><span class="text-danger" style="margin-right: 5px;">*</span> Mật khẩu: </label>
             <div class="input-group">
-              <input class="form-control" id="password" type="password" name="password" placeholder="Password" required="">
+              <input class="form-control" id="password" type="password" name="password" placeholder="" required="">
               <span class="input-group-btn">
                 <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
             </span>
@@ -133,13 +133,13 @@ header("location: myrestaurant.php"); //Redirecting to myrestaurant Page
 
         <div class="row">
           <div class="form-group col-xs-4">
-              <button class="btn btn-primary" name="submit" type="submit" value=" Login ">Submit</button>
+              <button class="btn btn-primary" name="submit" type="submit" value=" Login ">Xác nhận</button>
 
           </div>
 
         </div>
-        <label style="margin-left: 5px;">or</label> <br>
-       <label style="margin-left: 5px;"><a href="managersignup.php">Create a new account.</a></label>
+        <label style="margin-left: 5px;">hoặc</label> <br>
+       <label style="margin-left: 5px;"><a href="managersignup.php">Tạo một tài khoản mới.</a></label>
        
 
         </form>

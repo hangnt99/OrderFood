@@ -67,15 +67,15 @@ header('Location: managerlogin.php');
 
         <div class="collapse navbar-collapse " id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="aboutus.php">About</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="index.php">Trang chủ</a></li>
+          
+            <li><a href="contactus.php">Liên hệ</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $login_session; ?> </a></li>
-            <li class="active"> <a href="managerlogin.php">MANAGER CONTROL PANEL</a></li>
-            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Log Out </a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào <?php echo $login_session; ?> </a></li>
+            <li class="active"> <a href="managerlogin.php">TRANG HỖ TRỢ NGƯỜI BÁN</a></li>
+            <li><a href="logout_m.php"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất </a></li>
           </ul>
         </div>
 
@@ -87,8 +87,8 @@ header('Location: managerlogin.php');
 
 <div class="container">
     <div class="jumbotron">
-     <h1>Hello Manager! </h1>
-     <p>Manage all your restaurant from here</p>
+     <h1>Xin chào Manager! </h1>
+     <p>Quản lý cửa hàng của bạn tại đây.</p>
 
     </div>
     </div>
@@ -104,12 +104,12 @@ header('Location: managerlogin.php');
     	<div class="col-xs-3" style="text-align: center;">
 
     	<div class="list-group">
-    		<a href="myrestaurant.php" class="list-group-item ">My Restaurant</a>
-    		<a href="view_food_items.php" class="list-group-item ">View Food Items</a>
-    		<a href="add_food_items.php" class="list-group-item ">Add Food Items</a>
-    		<a href="edit_food_items.php" class="list-group-item active">Edit Food Items</a>
-    		<a href="delete_food_items.php" class="list-group-item ">Delete Food Items</a>
-        <a href="view_order_details.php" class="list-group-item ">View Order Details</a>
+        <a href="myrestaurant.php" class="list-group-item ">Cửa hàng của tôi</a>
+    		<a href="view_food_items.php" class="list-group-item ">Menu</a>
+    		<a href="add_food_items.php" class="list-group-item ">Thêm sản phẩm</a>
+    		<a href="edit_food_items.php" class="list-group-item ">Sửa sản phẩm </a>
+    		<a href="delete_food_items.php" class="list-group-item active">Xóa sản phẩm</a>
+        <a href="view_order_details.php" class="list-group-item ">Xem đơn đặt hàng</a>
     	</div>
     </div>
     
@@ -174,29 +174,29 @@ header('Location: managerlogin.php');
  <div class="form-area" style="padding: 0px 100px 100px 100px;">
         <form action="edit_food_items.php" method="GET">
         <br style="clear: both">
-          <h3 style="margin-bottom: 25px; text-align: center; font-size: 30px;"> EDIT YOUR FOOD ITEMS HERE </h3>
+          <h3 style="margin-bottom: 25px; text-align: center; font-size: 30px;"> SỬA SẢN PHẨM Ở ĐÂY </h3>
 
           <div class="form-group">
             <input class='input' type='hidden' name="dfid" value=<?php echo $row1['F_ID'];  ?> />
           </div>
 
           <div class="form-group">
-            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Food Name: </label>
-            <input type="text" class="form-control" id="dname" name="dname" value=<?php echo $row1['name'];  ?> placeholder="Your Food name" required="">
+            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Tên sản phẩm </label>
+            <input type="text" class="form-control" id="dname" name="dname" value=<?php echo $row1['name'];  ?> placeholder="tên sản phẩm" required="">
           </div>     
 
           <div class="form-group">
-            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Food Price: </label>
-            <input type="text" class="form-control" id="dprice" name="dprice" value=<?php echo $row1['price'];  ?> placeholder="Your Food Price (INR)" required="">
+            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Giá: </label>
+            <input type="text" class="form-control" id="dprice" name="dprice" value=<?php echo $row1['price'];  ?> placeholder="giá" required="">
           </div>
 
           <div class="form-group">
-            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Food Description: </label>
-            <input type="text" class="form-control" id="ddescription" name="ddescription" value=<?php echo $row1['description'];  ?> placeholder="Your Food Description" required="">
+            <label for="username"><span class="text-danger" style="margin-right: 5px;">*</span> Mô tả: </label>
+            <input type="text" class="form-control" id="ddescription" name="ddescription" value=<?php echo $row1['description'];  ?> placeholder="mô tả" required="">
           </div>
 
           <div class="form-group">
-          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right" onclick="display_alert()" value="Display alert box" > Update </button>    
+          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right" onclick="display_alert()" value="Display alert box" > Cập nhật </button>    
       </div>
         </form>
 
