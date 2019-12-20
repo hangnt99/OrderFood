@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 22, 2019 at 02:53 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th12 09, 2019 lúc 08:23 PM
+-- Phiên bản máy phục vụ: 10.4.8-MariaDB
+-- Phiên bản PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `foodorder`
+-- Cơ sở dữ liệu: `foodorder`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Cấu trúc bảng cho bảng `contact`
 --
 
 CREATE TABLE `contact` (
@@ -37,7 +37,7 @@ CREATE TABLE `contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `contact`
+-- Đang đổ dữ liệu cho bảng `contact`
 --
 
 INSERT INTO `contact` (`Name`, `Email`, `Mobile`, `Subject`, `Message`) VALUES
@@ -49,7 +49,7 @@ INSERT INTO `contact` (`Name`, `Email`, `Mobile`, `Subject`, `Message`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Cấu trúc bảng cho bảng `customer`
 --
 
 CREATE TABLE `customer` (
@@ -62,12 +62,13 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `customer`
+-- Đang đổ dữ liệu cho bảng `customer`
 --
 
 INSERT INTO `customer` (`username`, `fullname`, `email`, `contact`, `address`, `password`) VALUES
 ('birju', 'BIRJU KUMAR', 'bkm123r@gmail.com', '8903079750', 'Pondicherry University, SRK HOSTEL ROOM NUMBER-59,', 'Birju123@'),
 ('ckumar', 'CHANDAN KUMAR', 'ckj40856@gmail.com', '9487810674', 'Pondicherry University, SRK HOSTEL ROOM NUMBER-59,', 'Ckumar123@'),
+('nguyenhangpnpt', 'Hang Nguyen Thu', 'nguyenhangpnpt@gmail.com', 'Viet Nam', 'Cau Giay', '123'),
 ('nidha', 'nidha', 'nidha@gmail.com', '998696572', 'Maharashtra', 'suhail'),
 ('pratheek083', 'Pratheek Shiri', 'pratheek@gmail.com', '8779546521', 'Hyderabad', 'pratheek'),
 ('rakshithk00', 'Rakshith Kotian', 'rakshith@gmail.com', '9547123658', 'Gujarath', 'rakshith');
@@ -75,7 +76,7 @@ INSERT INTO `customer` (`username`, `fullname`, `email`, `contact`, `address`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `food`
+-- Cấu trúc bảng cho bảng `food`
 --
 
 CREATE TABLE `food` (
@@ -89,35 +90,34 @@ CREATE TABLE `food` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `food`
+-- Đang đổ dữ liệu cho bảng `food`
 --
 
 INSERT INTO `food` (`F_ID`, `name`, `price`, `description`, `R_ID`, `images_path`, `options`) VALUES
-(58, 'Juicy Masala Paneer Kathi Roll', 40, 'Juicy Masala Paneer Kathi Roll loaded with Masala Paneer chunks, onion & Mayo.', 1, 'images/Masala_Paneer_Kathi_Roll.jpg', 'ENABLE'),
-(59, 'Meurig Fish', 60, 'Try Meurig - A whole Pomfret fish grilled with tangy marination & served with grilled onions and tomatoes.', 2, 'images/Meurig.jpg', 'ENABLE'),
-(60, 'Chocolate Hazelnut Truffle', 99, 'Lose all senses over this very delicious chocolate hazelnut truffle.', 3, 'images/Chocolate_Hazelnut_Truffle.jpg', 'ENABLE'),
-(61, 'Happy Happy Choco Chip Shake', 80, 'Happy Happy Choco Chip Shake - a perfect party sweet treat.', 1, 'images/Happy_Happy_Choco_Chip_Shake.jpg', 'ENABLE'),
-(62, 'Spring Rolls', 65, 'Delicious Spring Rolls by Dragon Hut, Delhi. Order now!!!', 2, 'images/Spring_Rolls.jpg', 'ENABLE'),
-(63, 'Baahubali Thali', 75, 'Baahubali Thali is accompanied by Kattapa Biriyani, Devasena Paratha, Bhalladeva Patiala Lassi', 3, 'images/Baahubali_Thali.jpg', 'ENABLE'),
-(65, 'Coffee', 25, 'concentrated coffee made by forcing pressurized water through finely ground coffee beans.', 4, 'images/coffee.jpg', 'DISABLE'),
-(66, 'Tea', 20, 'The simple elixir of tea is of our natural world.', 4, 'images/tea.jpg', 'DISABLE'),
+(58, 'BÁNH KEM TEDDY', 250000, 'Cốt bánh socola 4 lớp với lớp nhân táo đặc biệt, lớp kem socola.', 1, 'images/bk_teddy.jpg', 'ENABLE'),
+(59, 'BÁNH KEM PUPPY', 250000, 'Bánh kem Puppy dành cho những ai có tâm hồn “bay bổng”.\r\n\r\n', 2, 'images/bk_puppy.jpg', 'ENABLE'),
+(60, 'Chocolate Hazelnut Truffle', 45000, 'Lose all senses over this very delicious chocolate hazelnut truffle.', 3, 'images/Chocolate_Hazelnut_Truffle.jpg', 'ENABLE'),
+(61, 'BÁNH KEM MANGO', 180000, 'Happy Happy Choco Chip Shake - a perfect party sweet treat.', 1, 'images/bk_mango.jpg', 'ENABLE'),
+(62, 'Bánh kem', 180000, 'Kem lớp vanilla hòa trộn cùng cốt vanilla 3 lớp đặc trưng, trang trí thêm những lát hoa văn socola đẹp mắt.', 2, 'images/banhkem_1.png', 'ENABLE'),
+(63, 'BÁNH KEM PINK LADY', 220000, 'Baahubali Thali is accompanied by Kattapa Biriyani, Devasena Paratha, Bhalladeva Patiala Lassi', 3, 'images/bk_pink_lady.jpg', 'ENABLE'),
+(65, 'BÁNH BOSTON CHOCOLATE', 120000, 'concentrated coffee made by forcing pressurized water through finely ground coffee beans.', 4, 'images/bk_boston_chocolate.jpg', 'DISABLE'),
+(66, 'BÁNH KEM COCONUT', 200000, 'The simple elixir of tea is of our natural world.', 4, 'images/bk_coconut.jpg', 'DISABLE'),
 (68, 'Paneer', 85, 'it', 6, 'images/paneer pakora.jpg', 'DISABLE'),
-(69, 'Coffee', 25, 'concentrated coffee made by forcing pressurized water through finely ground coffee beans.', 2, 'images/coffee.jpg', 'ENABLE'),
-(70, 'Tea', 20, 'The simple elixir of tea is of our natural world.', 2, 'images/tea.jpg', 'ENABLE'),
-(71, 'Samosa', 40, 'Cocktail Crispy Samosa..', 2, 'images/samosa.jpg', 'ENABLE'),
-(72, 'Paneer Pakora', 45, 'it gives whole new dimension even to the most boring or dull vegetable', 2, 'images/paneer pakora.jpg', 'ENABLE'),
-(73, 'Puff', 35, 'Vegetable Puff, a snack with crisp-n-flaky outer layer and mixed vegetables stuffing', 2, 'images/puff.jpg', 'ENABLE'),
-(74, 'Pizza', 200, 'Good and Tasty ', 2, 'Pizza.jpg', 'DISABLE'),
-(75, 'French Fries', 60, 'Pure Veg and Tasty.', 2, 'frenchfries.jpg', 'DISABLE'),
+(69, 'Coffee', 45000, 'concentrated coffee made by forcing pressurized water through finely ground coffee beans.', 2, 'images/coffee.jpg', 'ENABLE'),
+(70, 'Chocolate Cake', 70000, '', 2, 'images/cake.jpg', 'ENABLE'),
+(71, 'BÁNH KEM CARAMEN', 280000, 'Cocktail Crispy Samosa..', 2, 'images/bk_caramen.png', 'ENABLE'),
+(72, 'BÁNH KEM 3D CAR', 220000, 'it gives whole new dimension even to the most boring or dull vegetable', 2, 'images/bk_3Dcar.jpg', 'ENABLE'),
+(73, 'BÁNH KEM TEDDY', 250000, 'Cốt bánh socola 4 lớp với lớp nhân táo đặc biệt, lớp kem socola.', 2, 'images/bk_teddy.jpg', 'ENABLE'),
+(74, 'BÁNH KEM CREAM & VANILLA', 200000, 'Sự đặc trưng từ kem lớp vanilla hòa trộn cùng cốt 3 lớp, trang trí thêm những lát hoa văn socola đẹp mắt.', 2, 'banhkem_1.png', 'DISABLE'),
 (76, 'Pakora', 35, 'Pure Vegetable and Tasty.', 2, 'images/Pakora.jpg', 'DISABLE'),
-(77, 'Pizza', 200, 'Pure Vegetable and Tasty.', 2, 'images/Pizza.jpg', 'ENABLE'),
-(78, 'French Fries', 75, 'Pure Veg and Tasty.', 2, 'images/frenchfries.jpg', 'ENABLE'),
+(77, 'Special Chocolate Cake', 50000, 'Bánh ngọt được làm từ loại chocolate hảo hạng cùng lớp kem đặc biệt.', 2, 'images/cake_2.jpg', 'ENABLE'),
+(78, 'Santa Claus CUP', 75000, 'Pure Veg and Tasty.', 2, 'images/redandwhiteSanta.jpg', 'ENABLE'),
 (79, 'Pakora', 45, 'TASTY', 2, 'images/Pakora.jpg', 'ENABLE');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `manager`
+-- Cấu trúc bảng cho bảng `manager`
 --
 
 CREATE TABLE `manager` (
@@ -130,10 +130,11 @@ CREATE TABLE `manager` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `manager`
+-- Đang đổ dữ liệu cho bảng `manager`
 --
 
 INSERT INTO `manager` (`username`, `fullname`, `email`, `contact`, `address`, `password`) VALUES
+('17020724', 'Hang Nguyen Thu', 'nguyenhangpnpt@gmail.com', 'Viet Nam', 'Cau Giay', '123'),
 ('aditi068', 'Aditi Naik', 'aditi@gmail.com', '8654751259', 'Goa', 'aditi'),
 ('aminnikhil073', 'Nikhil Amin', 'aminnikhil073@gmail.com', '9632587412', 'Karnataka', 'nikhil'),
 ('ckumar', 'Chandan Kumar', 'ckj40856@gmail.com', '9487810674', 'Pondicherry University, SRK HOSTEL ROOM NUMBER-59,', 'Ckumar123'),
@@ -143,7 +144,7 @@ INSERT INTO `manager` (`username`, `fullname`, `email`, `contact`, `address`, `p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Cấu trúc bảng cho bảng `orders`
 --
 
 CREATE TABLE `orders` (
@@ -158,7 +159,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `orders`
+-- Đang đổ dữ liệu cho bảng `orders`
 --
 
 INSERT INTO `orders` (`order_ID`, `F_ID`, `foodname`, `price`, `quantity`, `order_date`, `username`, `R_ID`) VALUES
@@ -229,12 +230,22 @@ INSERT INTO `orders` (`order_ID`, `F_ID`, `foodname`, `price`, `quantity`, `orde
 (65, 70, 'Tea', 20, 4, '2019-04-17', 'ckumar', 2),
 (66, 72, 'Paneer Pakora', 45, 2, '2019-04-17', 'ckumar', 2),
 (67, 60, 'Chocolate Hazelnut Truffle', 99, 1, '2019-04-18', 'ckumar', 3),
-(68, 71, 'Samosa', 40, 1, '2019-04-18', 'ckumar', 2);
+(68, 71, 'Samosa', 40, 1, '2019-04-18', 'ckumar', 2),
+(69, 69, 'Coffee', 25, 1, '2019-12-05', 'nguyenhangpnpt', 2),
+(70, 59, 'Meurig Fish', 60, 1, '2019-12-05', 'nguyenhangpnpt', 2),
+(71, 69, 'Coffee', 25, 1, '2019-12-05', 'nguyenhangpnpt', 2),
+(72, 59, 'Meurig Fish', 60, 1, '2019-12-05', 'nguyenhangpnpt', 2),
+(73, 59, 'Meurig Fish', 60, 1, '2019-12-05', 'nguyenhangpnpt', 2),
+(74, 58, 'Juicy Masala Paneer Kathi Roll', 40, 1, '2019-12-05', 'nguyenhangpnpt', 1),
+(75, 60, 'Chocolate Hazelnut Truffle', 99, 1, '2019-12-05', 'nguyenhangpnpt', 3),
+(76, 61, 'Happy Happy Choco Chip Shake', 80, 1, '2019-12-05', 'nguyenhangpnpt', 1),
+(77, 62, 'Spring Rolls', 65, 1, '2019-12-05', 'nguyenhangpnpt', 2),
+(78, 72, 'Paneer Pakora', 45, 1, '2019-12-05', 'nguyenhangpnpt', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `restaurants`
+-- Cấu trúc bảng cho bảng `restaurants`
 --
 
 CREATE TABLE `restaurants` (
@@ -247,7 +258,7 @@ CREATE TABLE `restaurants` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `restaurants`
+-- Đang đổ dữ liệu cho bảng `restaurants`
 --
 
 INSERT INTO `restaurants` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`) VALUES
@@ -258,30 +269,30 @@ INSERT INTO `restaurants` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`
 (6, 'Le Cafe', 'lecafepondi234@gmail.com', '9443369040', 'Pondicherry,rock beach Near,Le cafe', 'dhiraj');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `customer`
+-- Chỉ mục cho bảng `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indexes for table `food`
+-- Chỉ mục cho bảng `food`
 --
 ALTER TABLE `food`
   ADD PRIMARY KEY (`F_ID`,`R_ID`),
   ADD KEY `R_ID` (`R_ID`);
 
 --
--- Indexes for table `manager`
+-- Chỉ mục cho bảng `manager`
 --
 ALTER TABLE `manager`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indexes for table `orders`
+-- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_ID`),
@@ -290,7 +301,7 @@ ALTER TABLE `orders`
   ADD KEY `R_ID` (`R_ID`);
 
 --
--- Indexes for table `restaurants`
+-- Chỉ mục cho bảng `restaurants`
 --
 ALTER TABLE `restaurants`
   ADD PRIMARY KEY (`R_ID`),
@@ -298,39 +309,39 @@ ALTER TABLE `restaurants`
   ADD KEY `M_ID` (`M_ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `food`
+-- AUTO_INCREMENT cho bảng `food`
 --
 ALTER TABLE `food`
   MODIFY `F_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `order_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
--- AUTO_INCREMENT for table `restaurants`
+-- AUTO_INCREMENT cho bảng `restaurants`
 --
 ALTER TABLE `restaurants`
   MODIFY `R_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `food`
+-- Các ràng buộc cho bảng `food`
 --
 ALTER TABLE `food`
   ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`R_ID`) REFERENCES `restaurants` (`R_ID`);
 
 --
--- Constraints for table `orders`
+-- Các ràng buộc cho bảng `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`F_ID`) REFERENCES `food` (`F_ID`),
@@ -338,7 +349,7 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`R_ID`) REFERENCES `restaurants` (`R_ID`);
 
 --
--- Constraints for table `restaurants`
+-- Các ràng buộc cho bảng `restaurants`
 --
 ALTER TABLE `restaurants`
   ADD CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`M_ID`) REFERENCES `manager` (`username`);

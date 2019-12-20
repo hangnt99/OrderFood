@@ -4,7 +4,7 @@ body,html {
 
 body {
   padding-top: 50px;
-  background-image: url('images/headerimg2.jpg');
+  background-image: url('headerimg2.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
 
@@ -53,12 +53,26 @@ footer{
 
 /*styles for heading before form */
 .heading {
+  position: relative;
+  top: 150px;
   text-align: center;
-  background-color: grey;
-  padding: 30px;
   font-size: 40px;
+  padding: 6px;
+  width: 600px;
+  margin: auto;
 }
-
+.sum{
+  display: flex;
+  width: 100%;
+}
+.left{
+  width: 40%;
+}
+.right{
+  width: 60%;
+  margin-right: 100px;
+  margin-left: 100px;
+}
 /*for paragrah below form */
 .paragraph1{
   text-align: center;
